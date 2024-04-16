@@ -6,7 +6,7 @@ class Post {
     private $title;
     private $category;
     private $tags;
-    public function __construct($title, Category $category, $tags) {
+    public function __construct(str $title, Category $category, str $tags) {
         $this->title = $title;
         $this->category = $category;
         $this->tags = $tags;
@@ -22,7 +22,7 @@ class Post {
     }
 }
 
-$post1 = new Post("Elezioni presidenziali USA", new Actuality(), "#Trump");
+$post1 = new Post("Elezioni", new Actuality(), "#Trump");
 $post2 = new Post("Juve - Milan", new Sport(), "#Calcio");
 $post3 = new Post("Fedez si è lasciato", new Gossip(), "#Ferragni");
 $post4 = new Post("Missili dall'Iran", new History(), "#MedioOriente");
