@@ -5,13 +5,13 @@ class Power{
         echo "Power on\n";
         echo "Initializing Shields..\n";
         echo "Initializing Rockets..\n";
-        echo "Initializing Weapons..\n";
+        echo "Initializing Weapons..\n\n";
     }
     public function powerOff(){
         echo "Power off\n";
         echo "Shields off\n";
         echo "Rockets off\n";
-        echo "Weapons off\n";
+        echo "Weapons off\n\n";
     }
 }
 

@@ -1,26 +1,26 @@
 <?php
 abstract class Shield{
-    public $shieldPower;
-    public $shieldCharge;
+    protected $shieldPower;
+    protected $shieldCharge;
     public function __construct(int $shieldPower, int $shieldCharge){
         $this->shieldPower = $shieldPower;
         $this->shieldCharge = $shieldCharge;
     }
-    abstract public function activatingShields();
+    abstract protected function activatingShields();
 }
 
 class BodyShield extends Shield{
     public function activatingShields(){
         echo "Body Shields Activated.\n";
         echo "Body Shields Power ----> $this->shieldPower.\n";
-        echo "Body Shields Charged, total power ----> $this->shieldCharge.\n";
+        echo "Body Shields Charged, total power ----> $this->shieldCharge.\n\n";
     }
 }
 class LegShield extends Shield{
     public function activatingShields(){
         echo "Legs Shields Activated.\n";
         echo "Legs Shields Power ----> $this->shieldPower.\n";
-        echo "Legs Shields Charged, total power ----> $this->shieldCharge.\n";
+        echo "Legs Shields Charged, total power ----> $this->shieldCharge.\n\n";
     }
 }
 class ArmShield extends Shield{
@@ -28,6 +28,6 @@ class ArmShield extends Shield{
     public function activatingShields(){
         echo "Arms Shields Activated.\n";
         echo "Arms Shields Power ----> $this->shieldPower.\n";
-        echo "Arms Shields Charged, total power ----> $this->shieldCharge.\n";
+        echo "Arms Shields Charged, total power ----> $this->shieldCharge.\n\n";
     }
 }
